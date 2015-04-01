@@ -8621,3 +8621,751 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass):
   Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
   Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
   Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:24:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 107ms (Views: 99.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-03-31 23:24:06 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (21.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-31 23:24:16 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ph2TPMeZbWeptvlgDdAtFDdYxLKL4rcfRVuOojJvk0M=", "user"=>{"username"=>"wyotana"}, "commit"=>"Register a new Cowboy"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Wed, 01 Apr 2015 06:24:16 UTC +00:00], ["updated_at", Wed, 01 Apr 2015 06:24:16 UTC +00:00], ["username", "wyotana"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:24:16 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pickacowboy" for 127.0.0.1 at 2015-03-31 23:24:20 -0700
+Processing by SessionsController#index as HTML
+  Rendered sessions/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <p>Pick a Cowboy that you would like to comment on</p>
+    2: <% @users.each do |user| %>
+    3: 	<p><%= user.username %></p>
+    4: <% end %>
+  app/views/sessions/index.html.erb:2:in `_app_views_sessions_index_html_erb__4403183706793499969_70205222841780'
+
+
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/pickacowboy" for 127.0.0.1 at 2015-03-31 23:24:20 -0700
+Processing by SessionsController#index as HTML
+  Rendered sessions/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <p>Pick a Cowboy that you would like to comment on</p>
+    2: <% @users.each do |user| %>
+    3: 	<p><%= user.username %></p>
+    4: <% end %>
+  app/views/sessions/index.html.erb:2:in `_app_views_sessions_index_html_erb__4403183706793499969_70205205636760'
+
+
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:26:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 106ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-03-31 23:26:53 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-31 23:26:56 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ph2TPMeZbWeptvlgDdAtFDdYxLKL4rcfRVuOojJvk0M=", "user"=>{"username"=>"ert"}, "commit"=>"Register a new Cowboy"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.7ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Wed, 01 Apr 2015 06:26:57 UTC +00:00], ["updated_at", Wed, 01 Apr 2015 06:26:57 UTC +00:00], ["username", "ert"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:26:57 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (4.5ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pickacowboy" for 127.0.0.1 at 2015-03-31 23:26:58 -0700
+Processing by SessionsController#index as HTML
+  Rendered sessions/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <p>Pick a Cowboy that you would like to comment on</p>
+    2: <% @users.each do |user| %>
+    3: 	<p><%= user.username %></p>
+    4: <% end %>
+    5: <p><%= @foo %></p>
+  app/views/sessions/index.html.erb:2:in `_app_views_sessions_index_html_erb__2673358046100827036_70139378254500'
+
+
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.8ms)
+
+
+Started GET "/pickacowboy" for 127.0.0.1 at 2015-03-31 23:26:58 -0700
+Processing by SessionsController#index as HTML
+  Rendered sessions/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <p>Pick a Cowboy that you would like to comment on</p>
+    2: <% @users.each do |user| %>
+    3: 	<p><%= user.username %></p>
+    4: <% end %>
+    5: <p><%= @foo %></p>
+  app/views/sessions/index.html.erb:2:in `_app_views_sessions_index_html_erb__2673358046100827036_70139380908080'
+
+
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:27:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 108ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:27:29 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-03-31 23:27:30 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-31 23:27:33 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ph2TPMeZbWeptvlgDdAtFDdYxLKL4rcfRVuOojJvk0M=", "user"=>{"username"=>"ertttttt"}, "commit"=>"Register a new Cowboy"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Wed, 01 Apr 2015 06:27:33 UTC +00:00], ["updated_at", Wed, 01 Apr 2015 06:27:33 UTC +00:00], ["username", "ertttttt"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:27:33 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pickacowboy" for 127.0.0.1 at 2015-03-31 23:27:34 -0700
+Processing by SessionsController#index as HTML
+  Rendered sessions/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:29:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 105ms (Views: 97.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:29:11 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-03-31 23:29:12 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 31.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-31 23:29:13 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ph2TPMeZbWeptvlgDdAtFDdYxLKL4rcfRVuOojJvk0M=", "user"=>{"username"=>"ewer"}, "commit"=>"Register a new Cowboy"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Wed, 01 Apr 2015 06:29:13 UTC +00:00], ["updated_at", Wed, 01 Apr 2015 06:29:13 UTC +00:00], ["username", "ewer"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:29:13 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pickacowboy" for 127.0.0.1 at 2015-03-31 23:29:15 -0700
+Processing by SessionsController#index as HTML
+  Rendered sessions/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:29:38 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-03-31 23:29:39 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-31 23:29:41 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ph2TPMeZbWeptvlgDdAtFDdYxLKL4rcfRVuOojJvk0M=", "user"=>{"username"=>"ddsfsdf"}, "commit"=>"Register a new Cowboy"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Wed, 01 Apr 2015 06:29:41 UTC +00:00], ["updated_at", Wed, 01 Apr 2015 06:29:41 UTC +00:00], ["username", "ddsfsdf"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:29:41 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pickacowboy" for 127.0.0.1 at 2015-03-31 23:29:42 -0700
+Processing by SessionsController#index as HTML
+  Rendered sessions/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <p>Pick a Cowboy that you would like to comment on</p>
+    2: 
+    3: <% @users.each do |user| %>
+    4: 	<p><%= user.username %></p>
+    5: <% end %>
+  app/views/sessions/index.html.erb:3:in `_app_views_sessions_index_html_erb__3601154113704992711_70107440204600'
+
+
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/pickacowboy" for 127.0.0.1 at 2015-03-31 23:29:42 -0700
+Processing by SessionsController#index as HTML
+  Rendered sessions/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <p>Pick a Cowboy that you would like to comment on</p>
+    2: 
+    3: <% @users.each do |user| %>
+    4: 	<p><%= user.username %></p>
+    5: <% end %>
+  app/views/sessions/index.html.erb:3:in `_app_views_sessions_index_html_erb__3601154113704992711_70107452531840'
+
+
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:35:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 97ms (Views: 89.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:35:06 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-03-31 23:35:07 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (27.1ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 50ms (Views: 44.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-31 23:35:15 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ph2TPMeZbWeptvlgDdAtFDdYxLKL4rcfRVuOojJvk0M=", "user"=>{"username"=>"erlichbachman"}, "commit"=>"Register a new Cowboy"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Wed, 01 Apr 2015 06:35:15 UTC +00:00], ["updated_at", Wed, 01 Apr 2015 06:35:15 UTC +00:00], ["username", "erlichbachman"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:35:15 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:35:17 -0700
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-03-31 23:35:32 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:35:34 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:35:37 -0700
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:36:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (No route matches {:controller=>"users", :action=>"show"} missing required keys: [:id]):
+    4: 
+    5: <%= link_to 'Click Here to Register a new  Cowboy', new_user_path, class: 'btn btn-success btn-large' %>
+    6: 
+    7: <%= link_to 'Click Here to Add a Cowboy Rodeo Review', user_path , class: 'btn btn-success btn-large' %>
+  app/views/posts/index.html.erb:7:in `_app_views_posts_index_html_erb___2555080265611672105_70324681284640'
+
+
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:36:23 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (No route matches {:controller=>"users", :action=>"show"} missing required keys: [:id]):
+    4: 
+    5: <%= link_to 'Click Here to Register a new  Cowboy', new_user_path, class: 'btn btn-success btn-large' %>
+    6: 
+    7: <%= link_to 'Click Here to Add a Cowboy Rodeo Review', user_path , class: 'btn btn-success btn-large' %>
+  app/views/posts/index.html.erb:7:in `_app_views_posts_index_html_erb___2555080265611672105_70324681284640'
+
+
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/hotero001/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:38:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 94ms (Views: 86.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-03-31 23:38:29 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (21.7ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 42.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-31 23:38:34 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ph2TPMeZbWeptvlgDdAtFDdYxLKL4rcfRVuOojJvk0M=", "user"=>{"username"=>"erlichbachman"}, "commit"=>"Register a new Cowboy"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (3.7ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)[0m  [["created_at", Wed, 01 Apr 2015 06:38:34 UTC +00:00], ["updated_at", Wed, 01 Apr 2015 06:38:34 UTC +00:00], ["username", "erlichbachman"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:38:34 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:38:35 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:41:04 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:41:08 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:41:10 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:41:23 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:41:23 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:41:24 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:41:40 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:41:43 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:41:44 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:41:50 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:41:53 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:41:54 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:42:27 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 93ms (Views: 85.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:42:28 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:42:28 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:43:18 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:43:19 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:44:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 86.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:44:05 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:44:06 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_navigation.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:44:18 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:44:18 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:44:18 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-03-31 23:44:19 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-31 23:44:22 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ph2TPMeZbWeptvlgDdAtFDdYxLKL4rcfRVuOojJvk0M=", "user"=>{"username"=>"barney"}, "commit"=>"Register a new Cowboy"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Wed, 01 Apr 2015 06:44:22 UTC +00:00], ["updated_at", Wed, 01 Apr 2015 06:44:22 UTC +00:00], ["username", "barney"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:44:22 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:44:24 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:44:27 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-03-31 23:44:28 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-31 23:44:30 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ph2TPMeZbWeptvlgDdAtFDdYxLKL4rcfRVuOojJvk0M=", "user"=>{"username"=>"barney"}, "commit"=>"Register a new Cowboy"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username") VALUES (?, ?, ?)  [["created_at", Wed, 01 Apr 2015 06:44:30 UTC +00:00], ["updated_at", Wed, 01 Apr 2015 06:44:30 UTC +00:00], ["username", "barney"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-31 23:44:30 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-03-31 23:44:32 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.8ms)
